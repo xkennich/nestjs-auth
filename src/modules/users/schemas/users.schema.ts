@@ -3,6 +3,10 @@ import { Document } from 'mongoose';
 
 export type UserDocument = User & Document;
 
+export enum UserQuery {
+  query = '_id login firstName lastName phone email',
+}
+
 @Schema()
 export class User {
   @Prop({ required: true })
